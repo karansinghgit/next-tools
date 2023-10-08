@@ -1,6 +1,7 @@
 import  Navbar  from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import { Head } from "./head";
+import Sidebar from "@/components/sidebar";
 
 export default function DefaultLayout({
 	children,
@@ -11,6 +12,9 @@ export default function DefaultLayout({
 		<div className="relative flex flex-col h-screen">
 			<Head />
 			<Navbar />
+			<div className="flex">
+            <Sidebar />
+			</div>
 			<main className="container mx-auto max-w-7xl px-6 flex-grow">
 				{children}
 			</main>
